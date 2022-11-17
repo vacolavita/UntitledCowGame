@@ -10,8 +10,7 @@ public class PlaySound : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         if (collision.relativeVelocity.magnitude > 2) {
-            Debug.Log("Bang");
-            impactSound.volume = Mathf.Min(1.0f, Mathf.Sqrt(collision.relativeVelocity.magnitude/200));
+            impactSound.volume = Mathf.Min(1.0f, Mathf.Sqrt(collision.relativeVelocity.magnitude/2000));
             impactSound.Play();
         }
     }
